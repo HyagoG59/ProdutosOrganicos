@@ -29,3 +29,18 @@ body {
                                                 const produtosFiltrados = produtos.filter(produto => produto.nome.toLowerCase().includes(termoPesquisa));
                                                     // Atualize a exibição dos produtos filtrados
                                                     });
+                                                    const filtros = {
+                                                            categoria: '',
+                                                                precoMinimo: 0,
+                                                                    precoMaximo: Infinity
+                                                                    };
+
+                                                                    // ... (código para atualizar os filtros ao interagir com os elementos)
+
+                                                                    function filtrarProdutos() {
+                                                                        const produtosFiltrados = produtos.filter(produto => {
+                                                                                return produto.categoria === filtros.categoria &&
+                                                                                               produto.preco >= filtros.precoMinimo &&
+                                                                                                              produto.preco <= filtros.precoMaximo;
+                                                                                                                  });
+                                                    }
